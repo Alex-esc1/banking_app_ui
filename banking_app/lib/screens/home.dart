@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       child: Column(children: [
         Appbar(),
-        CardList(),
+        CardsList(),
         RecentTransactions(),
       ]),
     );
