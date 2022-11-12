@@ -1,3 +1,4 @@
+import 'package:banking_app/utilities/themeStyles.dart';
 import 'package:flutter/material.dart';
 
 class CardList extends StatefulWidget {
@@ -19,8 +20,8 @@ class _CardListState extends State<CardList> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Your Cards'),
-                Text('See All'),
+                Text('Your Cards', style: ThemeStyles.primaryTitle),
+                Text('See All', style: ThemeStyles.seeAll),
               ],
             ),
           )
