@@ -1,5 +1,6 @@
 import 'package:banking_app/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({super.key});
@@ -23,7 +24,13 @@ class _HomeWidgetState extends State<HomeWidget> {
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
-        items: [BottomNavigationBarItem(icon: SvgPicture.asset())],
+        currentIndex: selectedIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/home-icon.svg'),
+            label: 'Home',
+          )
+        ],
       ),
     );
   }
