@@ -20,16 +20,39 @@ class _HomeWidgetState extends State<HomeWidget> {
       const HomeScreen(),
       const HomeScreen(),
     ];
+    void onTabTapped(index) {
+      setState(() {
+        selectedIndex = index;
+      });
+    }
+
     return const Scaffold(
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         elevation: 0,
+        onTap: onTabTapped,
         currentIndex: selectedIndex,
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/home-icon.svg'),
             label: 'Home',
-          )
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/transactions-icon.svg'),
+            label: 'Transactions',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/settings-icon.svg'),
+            label: 'Settings',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/smiley-icon.svg'),
+            label: 'Account',
+          ),
         ],
       ),
     );
