@@ -1,4 +1,5 @@
 import 'package:banking_app/screens/transactionPage.dart';
+import 'package:banking_app/utilities/themeColors.dart';
 import 'package:banking_app/utilities/themeStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -8,14 +9,15 @@ class TransactionCard extends StatefulWidget {
   final String price;
   final String letter;
   final Color color;
-  TransactionCard(
-      {required this.color,
-      required this.letter,
-      required this.price,
-      required this.subTitle,
-      required this.title});
+  TransactionCard({
+    required this.color,
+    required this.letter,
+    required this.price,
+    required this.subTitle,
+    required this.title,
+  });
   @override
-  State<TransactionCard> createState() => _TransactionCardState();
+  _TransactionCardState createState() => _TransactionCardState();
 }
 
 class _TransactionCardState extends State<TransactionCard> {
@@ -26,10 +28,17 @@ class _TransactionCardState extends State<TransactionCard> {
       child: GestureDetector(
         onTap: () {
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => TransactionsPage(),
-              ));
+            context,
+            MaterialPageRoute(
+              builder: (context) => TransactionsPage(
+                color: widget.color,
+                title: widget.title,
+                subTitle: widget.subTitle,
+                price: widget.price,
+                letter: widget.letter,
+              ),
+            ),
+          );
         },
         child: Container(
           height: 62.0,
@@ -37,6 +46,7 @@ class _TransactionCardState extends State<TransactionCard> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
