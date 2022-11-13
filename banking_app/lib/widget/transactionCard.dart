@@ -1,3 +1,4 @@
+import 'package:banking_app/screens/transactionPage.dart';
 import 'package:banking_app/utilities/themeStyles.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,13 @@ class _TransactionCardState extends State<TransactionCard> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
       child: GestureDetector(
-        onTap: null,
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TransactionsPage(),
+              ));
+        },
         child: Container(
           height: 62.0,
           width: 343.0,
