@@ -45,6 +45,27 @@ class _RecentTransactionsState extends State<RecentTransactions> {
                 subTitle: 'Finance Landing Page',
                 price: '- 5.720,30 €',
               ),
+              TransactionCard(
+                color: Colors.yellow,
+                letter: 'M',
+                title: 'McDonald’s',
+                subTitle: 'McDinner',
+                price: '- 20,50 €',
+              ),
+              TransactionCard(
+                color: Colors.purple,
+                letter: 'W',
+                title: 'Wildberries',
+                subTitle: 'Shopping',
+                price: '- 80,00 €',
+              ),
+              TransactionCard(
+                color: Colors.grey,
+                letter: 'A',
+                title: 'Apple',
+                subTitle: 'Salary',
+                price: '8000,00 €',
+              ),
             ],
           ),
         )
