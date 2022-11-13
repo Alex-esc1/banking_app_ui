@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {
-  const HomeWidget({super.key});
-
   @override
-  State<HomeWidget> createState() => _HomeWidgetState();
+  _HomeWidgetState createState() => _HomeWidgetState();
 }
+
+// Used for Bottom Navigation Bar
 
 class _HomeWidgetState extends State<HomeWidget> {
   int selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     List<Widget> widgetOptions = <Widget>[
@@ -26,7 +25,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       });
     }
 
-    return const Scaffold(
+    return Scaffold(
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,

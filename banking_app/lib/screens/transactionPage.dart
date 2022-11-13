@@ -2,7 +2,13 @@ import 'package:banking_app/utilities/themeStyles.dart';
 import 'package:flutter/material.dart';
 
 class TransactionsPage extends StatefulWidget {
-  const TransactionsPage({super.key});
+  const TransactionsPage(
+      {super.key,
+      required Color color,
+      required String title,
+      required String subTitle,
+      required String price,
+      required String letter});
 
   @override
   State<TransactionsPage> createState() => _TransactionsPageState();
